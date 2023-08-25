@@ -128,15 +128,6 @@
     "id": "yctw3ru2-7jmn-wve2-oz25-bnrrap5ehhwx"
   },
   {
-    "name": "[SELESTIA] JUMPER SUIT",
-    "img": "https://s2.booth.pm/70ae207e-72bd-4bf4-ae95-e25fe6547506/i/4956003/97240437-02eb-4eba-a786-4e5aa6e2897f_base_resized.jpg",
-    "source": "https://xdtox.booth.pm/items/4956003",
-    "assetType": "Clothing",
-    "avatarName": ["-Selestia-"],
-    "comment": "",
-    "id": "wk2bx5ua-o6os-c4mg-q43v-9xciz5ejmyt4"
-  },
-  {
     "name": "[KIKYO] JUMPER SUIT",
     "img": "https://s2.booth.pm/70ae207e-72bd-4bf4-ae95-e25fe6547506/i/4951975/50fdeab4-0a6e-420d-bbb5-053b8f5472e1_base_resized.jpg",
     "source": "https://xdtox.booth.pm/items/4951975",
@@ -144,14 +135,5 @@
     "avatarName": ["Kikyo"],
     "comment": "",
     "id": "9vymp2n6-8ibz-vidw-cr63-i58yzq3tetv7"
-  },
-  {
-    "name": "[MOE] JUMPER SUIT",
-    "img": "https://s2.booth.pm/70ae207e-72bd-4bf4-ae95-e25fe6547506/i/4944306/96ea66b0-e119-4a2b-8ccf-d4b50fdbca31_base_resized.jpg",
-    "source": "https://xdtox.booth.pm/items/4944306",
-    "assetType": "Clothing",
-    "avatarName": ["Moe"],
-    "comment": "",
-    "id": "29qtfgbx-6qfb-rq8o-hh5p-3n8k7s2878pm"
   }
 ]
