@@ -99,12 +99,41 @@
         });
 
         window.onload = function () {
+            const proxyUrl = 'https://hcors.glitch.me/'; // CORS proxy URL
+            const url = proxyUrl + 'https://erisbooru.glitch.me/data/textures.json'; // Remote JSON URL
+
+            fetch(url)
+                .then(response => {
+                    // Check if response is successful
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    // Parse JSON
+                    return response.json();
+                })
+                .then(textures => {
+                    data.push(...textures);
+                })
+                .catch(error => {
+                    console.error('There was a problem fetching the data:', error);
+                });
+        }
+
+    </script>
+
+    <!-- <script>
+        const data = [];
+        rivets.bind(document.querySelector('body'), {
+            data: data
+        });
+
+        window.onload = function () {
             getData("../fetch/textures.json").then(textures => {
                 data.push(...textures)
             })
         }
 
-    </script>
+    </script> -->
 </body>
 
 </html>

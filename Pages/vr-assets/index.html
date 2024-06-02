@@ -88,7 +88,52 @@
 
     <script src="../../data/src/scripts/main.js"></script>
 
+
+    
     <script>
+        const data = [];
+        rivets.bind(document.querySelector('body'), {
+            data: data
+        });
+
+        window.onload = function () {
+            const proxyUrl = 'https://hcors.glitch.me/'; // CORS proxy URL
+            const url = proxyUrl + 'https://erisbooru.glitch.me/data/assets.json'; // Remote JSON URL
+            const url2 = proxyUrl + 'https://erisbooru.glitch.me/data/premium-hair.json'; // Remote JSON URL
+
+            fetch(url2)
+                .then(response => {
+                    // Check if response is successful
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    // Parse JSON
+                    return response.json();
+                })
+                .then(assets => {
+                    data.push(...assets);
+                }).then(
+                    fetch(url)
+                .then(response => {
+                    // Check if response is successful
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    // Parse JSON
+                    return response.json();
+                })
+                .then(assets => {
+                    data.push(...assets);
+                })
+                )
+                .catch(error => {
+                    console.error('There was a problem fetching the data:', error);
+                });
+        }
+
+    </script>
+
+    <!-- <script>
         const data = [];
         rivets.bind(document.querySelector('body'), {
             data: data
@@ -105,7 +150,7 @@
             })
         }
 
-    </script>
+    </script> -->
 </body>
 
 </html>
