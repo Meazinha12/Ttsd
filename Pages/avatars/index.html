@@ -87,60 +87,12 @@
     <script src="../../data/src/scripts/main.js"></script>
 
 
+
+
+
+
+
     <script>
-        const data = [];
-        rivets.bind(document.querySelector('body'), {
-            data: data
-        });
-
-        window.onload = function () {
-            const proxyUrl = 'https://hcors.glitch.me/'; // CORS proxy URL
-            const url = proxyUrl + 'https://erisbooru.glitch.me/data/premium-base.json'; // Remote JSON URL
-            const url2 = proxyUrl + 'https://erisbooru.glitch.me/data/premium-furry-base.json'; // Remote JSON URL
-
-            fetch(url)
-                .then(response => {
-                    // Check if response is successful
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    // Parse JSON
-                    return response.json();
-                })
-                .then(avatar => {
-                    data.push(...avatar);
-                })
-                .then(() => {
-                    // Introduce an artificial delay of 1000 milliseconds (1 second)
-                    return new Promise(resolve => setTimeout(resolve, 1000));
-                })
-                .then(() => {
-                    // Perform the second fetch after the delay
-                    return fetch(url2);
-                })
-                .then(response => {
-                    // Check if response is successful
-                    if (!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    // Parse JSON
-                    return response.json();
-                })
-                .then(avatar => {
-                    data.push(...avatar);
-                })
-                .catch(error => {
-                    console.error('There was a problem fetching the data:', error);
-                });
-
-        }
-
-    </script>
-
-
-
-
-    <!-- <script>
         const data = [];
         rivets.bind(document.querySelector('body'), {
             data: data
@@ -157,7 +109,7 @@
                 console.log(err);
             })
         }
-    </script> -->
+    </script>
 </body>
 
 </html>
